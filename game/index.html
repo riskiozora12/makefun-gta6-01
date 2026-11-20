@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Neon Bay — an open-world crime game</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<canvas id="game" aria-label="Neon Bay: an open-world crime game. Explore the city on foot and by car, take jobs, and stay ahead of the police."></canvas>
+<p id="status" role="status" aria-live="polite"></p>
+
+<div id="menu" class="overlay">
+  <div class="panel">
+    <h1>NEON BAY</h1>
+    <p class="tagline">A sun-soaked city. A driver with a debt. Five jobs to the top.</p>
+    <p class="story">Rae Vega owes Mara Quinn — and Mara collects in favours, not cash.
+      Steal cars, lose the NBPD, run the marina exchange, and take down Dario Kestrel,
+      the man who owns the bay's nights. The city is yours: drive it, walk it, work it.</p>
+    <div class="buttons">
+      <button id="start-btn" class="primary">Start new game</button>
+      <button id="continue-btn" class="hidden">Continue</button>
+      <button id="help-btn">How to play</button>
+    </div>
+    <div id="help" class="hidden">
+      <p><b>WASD / arrows</b> — move on foot, drive the car &nbsp;•&nbsp; <b>E</b> — enter a car, start a job, use the garage</p>
+      <p><b>Mouse + click</b> — aim and shoot (pistol, Q to switch) &nbsp;•&nbsp; <b>Shift</b> — run &nbsp;•&nbsp; <b>Space</b> — handbrake</p>
+      <p><b>P</b> — pause &nbsp;•&nbsp; <b>M</b> — mute &nbsp;•&nbsp; Steal cars, take taxi fares, grab cash, repair at Mara's Garage.</p>
+      <p>Stars mean the police are coming. Lose them, or pay for a respray at the garage.</p>
+    </div>
+    <p class="foot">Neon Bay is an original game. No part of it copies any commercial game.</p>
+  </div>
+</div>
+
+<div id="pause" class="overlay hidden">
+  <div class="panel">
+    <h1>Paused</h1>
+    <p class="tagline">The bay waits for you.</p>
+    <div class="buttons">
+      <button id="resume-btn" class="primary">Resume</button>
+    </div>
+  </div>
+</div>
+
+<div id="over" class="overlay hidden">
+  <div class="panel">
+    <h1 id="over-title">WASTED</h1>
+    <p class="tagline" id="over-text"></p>
+    <div class="buttons">
+      <button id="retry-btn" class="primary">Back on the street</button>
+      <button id="menu-btn">Main menu</button>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>

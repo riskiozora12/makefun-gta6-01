@@ -1,0 +1,37 @@
+html, body { margin: 0; height: 100%; overflow: hidden; background: #10141a; }
+#game { position: fixed; inset: 0; width: 100%; height: 100%; display: block; touch-action: none; }
+/* Read aloud, never shown: the status line screen readers announce. */
+#status { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+.overlay {
+  position: fixed; inset: 0; display: flex; align-items: center; justify-content: center;
+  background: rgba(8, 10, 16, 0.55); z-index: 10;
+}
+.overlay.hidden, .hidden { display: none; }
+.panel {
+  max-width: 620px; margin: 24px; padding: 36px 44px; border-radius: 14px;
+  background: linear-gradient(160deg, #1d2733 0%, #141a22 100%);
+  border: 1px solid #3a4a5a; color: #eef1f5;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+.panel h1 {
+  margin: 0 0 8px; font-size: 54px; letter-spacing: 6px; line-height: 1;
+  color: #ffd23c; text-shadow: 0 3px 0 #b8452f, 0 6px 18px rgba(0, 0, 0, 0.6);
+}
+.panel .tagline { margin: 0 0 14px; font-size: 17px; color: #ffb37a; font-weight: 600; }
+.panel .story { margin: 0 0 20px; font-size: 15px; line-height: 1.55; color: #c9d2dc; }
+.panel .foot { margin: 18px 0 0; font-size: 12px; color: #8b93a3; }
+.buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+button {
+  font-family: inherit; font-size: 16px; font-weight: 700; padding: 12px 22px;
+  border-radius: 9px; border: 1px solid #4a5a6a; background: #2a3542; color: #eef1f5;
+  cursor: pointer;
+}
+button:hover { background: #35424f; }
+button.primary { background: #e8492f; border-color: #e8492f; color: #fff; }
+button.primary:hover { background: #f25a3d; }
+#help { margin-top: 18px; text-align: left; font-size: 14px; line-height: 1.6; color: #c9d2dc; }
+#help p { margin: 6px 0; }
+#help b { color: #ffd23c; }
